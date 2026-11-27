@@ -44,3 +44,36 @@ emp1.company = "Microsoft"
 print(emp1.company)
 print(emp2.company)
 print(Employee.company)
+
+
+
+
+# Instance variable
+# - Belongs to an individual object.
+# - Usually created inside __init__() using self.
+# - Each object can have its own value.
+
+class Employee:
+    def __init__(self, name): 
+        self.name = name  # instance varaible 
+
+
+# Class variable
+# - Belongs to the class.
+# - Defined directly inside the class, outside methods.
+# - Shared by objects unless an instance overrides it.
+class Employee:
+    company = "Google"    # class varaible
+
+    def __init__(self, name):
+        self.name = name
+
+
+class Bike:
+    wheels = 2
+
+    def __init__(self, brand):
+        self.brand = brand
+
+bike1 = Bike("KTM")
+bike2 = Bike("Royal Enfield")
